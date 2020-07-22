@@ -5,16 +5,21 @@
 {% endblock %}
 
 {% block body %}
-<h1>All Posts</h1>
-    {% for post in posts %}
-        <h2>{{ post.title }}</h2>
+<div class="container">
+    <h1>All Posts</h1>
+    <div class="all_post_div">
+        {% for post in posts %}
+        <div class="solo_post_div">
+            <h2 class="post_title">{{ post.title }}</h2>
 
-        {% if post.author %}
-            <h3>By: {{ post.author }}</h3>
-        {% else %}
-            <h3>By: N/A</h3>
-        {% endif %}
-        <p>{{ post.content }}</p>
-
-    {% endfor %}
+            {% if post.author %}
+                <h3 class="post_author">By: {{ post.author }}</h3>
+            {% else %}
+                <h3 class="post_author">By: N/A</h3>
+            {% endif %}
+            <p class="post_content">{{ post.content }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
