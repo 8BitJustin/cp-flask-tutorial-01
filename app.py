@@ -5,13 +5,16 @@ app = Flask(__name__)
 all_posts = [
     {
         'title': 'Post 1',
-        'content': 'This is content of post 1.'
+        'content': 'This is content of post 1.',
+        'author': 'Justin'
     },
     {
         'title': 'Post 2',
         'content': 'This is content of post 2.'
     }
 ]
+
+# 39:00
 
 
 @app.route('/')
