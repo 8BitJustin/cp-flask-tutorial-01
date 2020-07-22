@@ -14,8 +14,6 @@ all_posts = [
     }
 ]
 
-# 39:00
-
 
 @app.route('/')
 def index():
