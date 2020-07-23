@@ -3,6 +3,7 @@ body {
 }
 
 textarea,
+input[type=submit],
 input[type=text] {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
@@ -48,11 +49,16 @@ input[type=text] {
 .inputs {
     border: 1px solid #ccc;
     display: block;
-    width: 30%;
+    width: 40%;
+    margin: 6px auto;
+
 }
 
 .sub_button {
     display: block;
-    margin-top: 18px;
-    width: 100px;
+    width: 40%;
+    background-color: Transparent;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: auto;
 }
