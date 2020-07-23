@@ -2,6 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+textarea,
+input[type=text] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
 .container {
     width: 60%;
     margin: auto;
@@ -28,4 +34,25 @@ body {
 .post_content {
     width: 80%;
     margin: 16px auto;
+}
+
+.no_post_header {
+    margin-top: 50px;
+}
+
+.labels {
+    display: block;
+    margin: 12px 0px 6px;
+}
+
+.inputs {
+    border: 1px solid #ccc;
+    display: block;
+    width: 30%;
+}
+
+.sub_button {
+    display: block;
+    margin-top: 18px;
+    width: 100px;
 }

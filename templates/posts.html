@@ -7,31 +7,38 @@
 {% block body %}
 <div class="container">
     <div class="create_post_div">
-        <h2>Create new blog post:</h2>
+        <h2 class="create_post_header">Create new blog post</h2>
         <div class="create_post_form">
             <form action="/posts" method="POST">
-                <label for="title">Title: </label>
-                <input type="text" name="title" id="title">
-                <label for="post">Post: </label>
-                <input type="text" name="post" id="post">
-                <input type="submit" value="Post">
+                <input type="text" name="title" id="title" class="inputs"
+                       placeholder="Title">
+                <textarea name="post" id="post" class="inputs" rows="3"
+                          placeholder="Post"
+                ></textarea>
+                <input type="text" name="name" id="name" class="inputs"
+                       placeholder="Name">
+                <input type="submit" value="Post" class="sub_button">
             </form>
         </div>
     </div>
-    <h2>All Posts</h2>
-    <div class="all_post_div">
-        {% for post in posts %}
-        <div class="solo_post_div">
-            <h2 class="post_title">{{ post.title }}</h2>
+    {% if posts|length < 1 %}
+        <h2 class="no_post_header">No posts to display yet</h2>
+    {% else %}
+        <h2>All Posts</h2>
+        <div class="all_post_div">
+            {% for post in posts %}
+            <div class="solo_post_div">
+                <h2 class="post_title">{{ post.title }}</h2>
 
-            {% if post.author %}
-                <h3 class="post_author">By: {{ post.author }}</h3>
-            {% else %}
-                <h3 class="post_author">By: N/A</h3>
-            {% endif %}
-            <p class="post_content">{{ post.content }}</p>
-        </div>
+                {% if post.author %}
+                    <h3 class="post_author">By: {{ post.author }}</h3>
+                {% else %}
+                    <h3 class="post_author">By: N/A</h3>
+                {% endif %}
+                <p class="post_content">{{ post.content }}</p>
+            </div>
         {% endfor %}
     </div>
+    {% endif %}
 </div>
 {% endblock %}

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -20,17 +20,17 @@ class BlogPost(db.Model):
         return 'Blog post ' + str(self.id)
 
 
-all_posts = [
-    {
-        'title': 'Post 1',
-        'content': 'This is content of post 1.',
-        'author': 'Justin'
-    },
-    {
-        'title': 'Post 2',
-        'content': 'This is content of post 2.'
-    }
-]
+# all_posts = [
+#     {
+#         'title': 'Post 1',
+#         'content': 'This is content of post 1.',
+#         'author': 'Justin'
+#     },
+#     {
+#         'title': 'Post 2',
+#         'content': 'This is content of post 2.'
+#     }
+# ]
 
 
 @app.route('/')
@@ -40,7 +40,18 @@ def index():
 
 @app.route('/posts', methods=['GET', 'POST'])
 def posts():
-    return render_template('posts.html', posts=all_posts)
+    if request.method == 'POST':
+        post_title = request.form['title']
+        post_content = request.form['post']
+        post_name = request.form['name']
+        new_post = BlogPost(title=post_title, content=post_content,
+                            author=post_name)
+        db.session.add(new_post)
+        db.session.commit()
+        return redirect('/posts')
+    else:
+        all_posts = BlogPost.query.order_by(BlogPost.date_created).all()
+        return render_template('posts.html', posts=all_posts)
 
 
 if __name__ == "__main__":
