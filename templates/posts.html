@@ -6,7 +6,19 @@
 
 {% block body %}
 <div class="container">
-    <h1>All Posts</h1>
+    <div class="create_post_div">
+        <h2>Create new blog post:</h2>
+        <div class="create_post_form">
+            <form action="/posts" method="POST">
+                <label for="title">Title: </label>
+                <input type="text" name="title" id="title">
+                <label for="post">Post: </label>
+                <input type="text" name="post" id="post">
+                <input type="submit" value="Post">
+            </form>
+        </div>
+    </div>
+    <h2>All Posts</h2>
     <div class="all_post_div">
         {% for post in posts %}
         <div class="solo_post_div">
