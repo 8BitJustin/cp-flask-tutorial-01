@@ -17,7 +17,7 @@ class BlogPost(db.Model):
                              default=datetime.utcnow)
 
     def __repr__(self):
-        return 'Blog post ' + self.id
+        return 'Blog post ' + str(self.id)
 
 
 all_posts = [
