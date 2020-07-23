@@ -41,17 +41,13 @@ input[type=text] {
     margin-top: 50px;
 }
 
-.labels {
-    display: block;
-    margin: 12px 0px 6px;
-}
-
 .inputs {
     border: 1px solid #ccc;
     display: block;
     width: 40%;
-    margin: 6px auto;
-
+    margin: 6px 0px;
+    /* box-sizing used to align inputs with button width */
+    box-sizing: border-box;
 }
 
 .sub_button {
@@ -60,5 +56,6 @@ input[type=text] {
     background-color: Transparent;
     border: 1px solid #ccc;
     text-align: center;
-    margin: auto;
+    padding: 0;
+    margin: 0;
 }
