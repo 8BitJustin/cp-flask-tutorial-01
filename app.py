@@ -20,19 +20,6 @@ class BlogPost(db.Model):
         return 'Blog post ' + str(self.id)
 
 
-# all_posts = [
-#     {
-#         'title': 'Post 1',
-#         'content': 'This is content of post 1.',
-#         'author': 'Justin'
-#     },
-#     {
-#         'title': 'Post 2',
-#         'content': 'This is content of post 2.'
-#     }
-# ]
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
