@@ -51,6 +51,7 @@ input[type=text] {
 .post_title {
     width: 80%;
     margin: auto;
+    padding: 10px 0px;
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
@@ -58,7 +59,7 @@ input[type=text] {
 .post_author {
     text-align: center;
     margin: 0;
-    padding-top: 5px;
+    padding: 10px 0px;
 }
 
 .post_content {
