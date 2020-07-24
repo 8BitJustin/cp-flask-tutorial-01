@@ -2,6 +2,25 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.create_post_header {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.inputs {
+    border: 1px solid #ccc;
+    display: block;
+    width: 50%;
+    margin: 6px auto;
+    /* box-sizing used to align inputs with button width */
+    box-sizing: border-box;
+}
+
 textarea,
 input[type=submit],
 input[type=text] {
@@ -9,9 +28,19 @@ input[type=text] {
     font-size: 1em;
 }
 
-.container {
-    width: 60%;
-    margin: auto;
+.sub_button {
+    display: block;
+    width: 50%;
+    background-color: Transparent;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.no_post_header {
+    margin-top: 50px;
+    text-align: center;
 }
 
 .solo_post_div {
@@ -35,27 +64,4 @@ input[type=text] {
 .post_content {
     width: 80%;
     margin: 16px auto;
-}
-
-.no_post_header {
-    margin-top: 50px;
-}
-
-.inputs {
-    border: 1px solid #ccc;
-    display: block;
-    width: 40%;
-    margin: 6px 0px;
-    /* box-sizing used to align inputs with button width */
-    box-sizing: border-box;
-}
-
-.sub_button {
-    display: block;
-    width: 40%;
-    background-color: Transparent;
-    border: 1px solid #ccc;
-    text-align: center;
-    padding: 0;
-    margin: 0;
 }
