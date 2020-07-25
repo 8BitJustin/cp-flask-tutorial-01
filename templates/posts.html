@@ -38,7 +38,8 @@
 
                 <p class="post_content">{{ post.content }}</p>
                 <div class="icon_div">
-                    <a href=""><img src="../static/icons/edit.png" alt=""
+                    <a href="/posts/edit/{{ post.id }}"><img
+                            src="../static/icons/edit.png" alt=""
                                 class="icons" id="icon_edit"></a>
                     <a href="/posts/delete/{{ post.id }}"><img
                             src="../static/icons/trash.png" alt=""
