@@ -66,3 +66,13 @@ input[type=text] {
     width: 80%;
     margin: 16px auto;
 }
+
+.icon_div {
+    text-align: right;
+    margin: 12px 6px 6px 0px;
+}
+
+#icon_edit {
+    width: 22px;
+    margin-right: 6px;
+}
