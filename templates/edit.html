@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block head %}
+<title>Edit</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="create_post_div">
+        <h2 class="create_post_header">Edit blog post</h2>
+        <div class="create_post_form">
+            <form action="/posts/edit/{{ post.id }}" method="POST">
+                <input type="text" name="title" id="title" class="inputs"
+                       value="{{ post.title }}">
+                <textarea name="post" id="post" class="inputs" rows="3"
+                >{{ post.content }}</textarea>
+                <input type="text" name="name" id="name" class="inputs"
+                       value="{{ post.author }}">
+                <input type="submit" value="Save" class="sub_button">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

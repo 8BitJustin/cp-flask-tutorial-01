@@ -43,6 +43,11 @@ input[type=text] {
     text-align: center;
 }
 
+.post_header {
+    margin-top: 50px;
+    text-align: center;
+}
+
 .solo_post_div {
     border: 1px solid #ccc;
     margin: 20px 0px;
