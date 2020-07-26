@@ -72,6 +72,12 @@ input[type=text] {
     margin: 16px auto;
 }
 
+.post_created {
+    font-size: .75em;
+    width: 80%;
+    margin: 16px auto;
+}
+
 .icon_div {
     text-align: right;
     margin: 12px 6px 6px 0px;

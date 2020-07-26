@@ -14,7 +14,8 @@ class BlogPost(db.Model):
     content = db.Column(db.Text, nullable=False)
     author = db.Column(db.String(20), nullable=False, default='N/A')
     date_created = db.Column(db.String(), nullable=False,
-                             default=datetime.now().strftime("%m-%d-%Y %H:%M"))
+                             default=datetime.now().strftime("%a, %B %d, %Y @ "
+                                                             "%I:%M %p"))
 
     def __repr__(self):
         return 'Blog post ' + str(self.id)
