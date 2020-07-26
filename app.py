@@ -13,8 +13,8 @@ class BlogPost(db.Model):
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
     author = db.Column(db.String(20), nullable=False, default='N/A')
-    date_created = db.Column(db.DateTime, nullable=False,
-                             default=datetime.utcnow)
+    date_created = db.Column(db.String(), nullable=False,
+                             default=datetime.now().strftime("%m-%d-%Y %H:%M"))
 
     def __repr__(self):
         return 'Blog post ' + str(self.id)
