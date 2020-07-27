@@ -37,7 +37,9 @@
                 {% endif %}
 
                 <p class="post_content">{{ post.content }}</p>
-                <p class="post_created">{{ post.date_created }}</p>
+                <p class="post_created">
+                    {{ post.date_created.strftime("%A, %b %d %Y @ %I:%M %p") }}
+                </p>
                 <div class="icon_div">
                     <a href="/posts/edit/{{ post.id }}"><img
                             src="../static/icons/edit.png" alt=""
