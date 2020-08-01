@@ -1,5 +1,14 @@
+html,
 body {
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+.index_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .container {
