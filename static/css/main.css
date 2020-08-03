@@ -1,23 +1,37 @@
+/*
+ * Globals
+ */
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-.index_box {
+textarea,
+input[type=submit],
+input[type=text] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+/*
+ * Base.html
+ */
+
+ .container {
+    width: 60%;
+    margin: auto;
+}
+
+ /*
+ * Index.html
+ */
+
+ .index_box {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: calc(100vh - 56px);
-}
-
-.container {
-    width: 60%;
-    margin: auto;
-}
-
-.home_header {
-    margin-top: 50px;
-    text-align: center;
 }
 
 .create_post_header {
@@ -32,13 +46,6 @@ body {
     margin: 6px auto;
     /* box-sizing used to align inputs with button width */
     box-sizing: border-box;
-}
-
-textarea,
-input[type=submit],
-input[type=text] {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
 }
 
 .sub_button {
